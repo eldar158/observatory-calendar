@@ -1,0 +1,8 @@
+old/
+todo.*
+test.*
+credentials.*
+config.*
+token.*
+
+*.bsp
