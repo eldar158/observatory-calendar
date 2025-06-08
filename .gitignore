@@ -1,0 +1,12 @@
+old/
+todo.*
+test.*
+credentials.*
+config.*
+token.*
+
+*.bsp
+
+__pycache__/
+*.py[cod]
+*$py.class
