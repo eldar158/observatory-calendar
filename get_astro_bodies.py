@@ -1,32 +1,8 @@
 from skyfield.api import load, Topos, Star
-
+from astro_bodies import planets, double_star_catalog, dso_catalog
 eph = load('de421.bsp')
 ts = load.timescale()
 
-
-# Planets: no RA/Dec needed
-planets = {
-    "mercury": ("Mercury", "חמה", "🟤", None, None),
-    "venus": ("Venus", "נוגה", "🟡", None, None),
-    "mars": ("Mars", "מאדים", "🔴", None, None),
-    "jupiter barycenter": ("Jupiter", "צדק", "🟠", None, None),
-    "saturn barycenter": ("Saturn", "שבתאי", "🪐", None, None),
-}
-
-# Double stars: with RA/Dec
-double_star_catalog = {
-    "Mizar & Alcor": ("Mizar & Alcor", "מיזאר ואלקור", "🌟", 13.3989, 54.9254),
-    "Albireo": ("Albireo", "אלביראו", "🌟", 19.512, 27.9597),
-    "Eta Cassiopeiae": ("Eta Cassiopeiae", "אטא קסיופאה", "🌟", 0.49, 57.815),
-}
-
-# DSOs: with RA/Dec
-dso_catalog = {
-    "Orion Nebula (M42)": ("Orion Nebula (M42)", "ערפילית אוריון (M42)", "🌌", 5.591, -5.45),
-    "Pleiades (M45)": ("Pleiades (M45)", "צביר הפליאדות (M45)", "✨", 3.792, 24.117),
-    "Beehive Cluster (M44)": ("Beehive Cluster (M44)", "צביר הכוורת (M44)", "✨", 8.667, 19.667),
-    "Hercules Cluster (M13)": ("Hercules Cluster (M13)", "צביר הרקולס (M13)", "✨", 16.7, 36.467),
-}
 
 
 def moon_emoji(illum):
